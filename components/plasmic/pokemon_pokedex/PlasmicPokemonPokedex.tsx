@@ -115,6 +115,10 @@ function useNextRouter() {
   return undefined;
 }
 
+function testoor() {
+  return null;
+}
+
 function PlasmicPokemonPokedex__RenderFunc(props: {
   variants: PlasmicPokemonPokedex__VariantsArgs;
   args: PlasmicPokemonPokedex__ArgsType;
@@ -603,7 +607,7 @@ function PlasmicPokemonPokedex__RenderFunc(props: {
                       "__wab_instance",
                       sty.addPokemonModal
                     )}
-                    closeIcon={null}
+                    closeIcon={testoor()}
                     defaultStylesClassName={classNames(
                       projectcss.root_reset,
                       projectcss.plasmic_default_styles,
