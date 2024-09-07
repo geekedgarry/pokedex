@@ -115,10 +115,6 @@ function useNextRouter() {
   return undefined;
 }
 
-function testoor() {
-  return null;
-}
-
 function PlasmicPokemonPokedex__RenderFunc(props: {
   variants: PlasmicPokemonPokedex__VariantsArgs;
   args: PlasmicPokemonPokedex__ArgsType;
@@ -389,6 +385,63 @@ function PlasmicPokemonPokedex__RenderFunc(props: {
                               sty.text__hAwsJ
                             )}
                           >
+                            {"testoor"}
+                          </div>
+                        </AntdButton>
+                        <AntdButton
+                          className={classNames(
+                            "__wab_instance",
+                            sty.button__uLdpc
+                          )}
+                          onClick={async () => {
+                            const $steps = {};
+
+                            $steps["updateAddPokemonOpen"] = true
+                              ? (() => {
+                                  const actionArgs = {
+                                    variable: {
+                                      objRoot: $state,
+                                      variablePath: ["addPokemonModal", "open"]
+                                    },
+                                    operation: 0,
+                                    value: true
+                                  };
+                                  return (({
+                                    variable,
+                                    value,
+                                    startIndex,
+                                    deleteCount
+                                  }) => {
+                                    if (!variable) {
+                                      return;
+                                    }
+                                    const { objRoot, variablePath } = variable;
+
+                                    $stateSet(objRoot, variablePath, value);
+                                    return value;
+                                  })?.apply(null, [actionArgs]);
+                                })()
+                              : undefined;
+                            if (
+                              $steps["updateAddPokemonOpen"] != null &&
+                              typeof $steps["updateAddPokemonOpen"] ===
+                                "object" &&
+                              typeof $steps["updateAddPokemonOpen"].then ===
+                                "function"
+                            ) {
+                              $steps["updateAddPokemonOpen"] = await $steps[
+                                "updateAddPokemonOpen"
+                              ];
+                            }
+                          }}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__b18My
+                            )}
+                          >
                             {"+ New pokemon"}
                           </div>
                         </AntdButton>
@@ -607,7 +660,7 @@ function PlasmicPokemonPokedex__RenderFunc(props: {
                       "__wab_instance",
                       sty.addPokemonModal
                     )}
-                    closeIcon={testoor()}
+                    closeIcon={null}
                     defaultStylesClassName={classNames(
                       projectcss.root_reset,
                       projectcss.plasmic_default_styles,
